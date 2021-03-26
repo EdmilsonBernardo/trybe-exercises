@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Exercício de Forms</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <form action="" method="GET">
+    <fieldset>
+      <label for="collect-name">Nome</label>
+      <input type="text" maxlength="40" id="collect-name" required>
+      <label for="collect-email">Email</label>
+      <input type="text" maxlength="50" id="collect-email" required>
+      <label for="collect-cpf">CPF</label>
+      <input type="text" maxlength="11" id="collect-cpf" required>
+      <label for="collect-adress">Endereço</label>
+      <input type="text" maxlength="200" id="collect-adress" required>
+      <label for="collect-city">Cidade</label>
+      <input type="text" maxlength="28" id="collect-city" required>
+      <label for="collect-state">Estado</label>
+      <select id="collect-state">
+      </select>
+      <label for="gender">Casa</label>
+      <input type="radio" id="house" name="collect-type" value="Casa">
+      <label for="female">Apartamento</label><br>
+      <input type="radio" id="apartment" name="collect-type" value="Apartamento">
+
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
