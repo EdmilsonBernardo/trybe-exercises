@@ -14,3 +14,8 @@ const newEmployees = () => {
 };
 
 console.log(newEmployees());
+
+//EXERCÍCIO 2:
+const numberDrawn = Math.floor(Math.random() * 5 + 1);
+
+const Drawn = (numberBet) => (numberBet === numberDrawn) ? 'Parabéns você ganhou' : 'Tente novamente';
