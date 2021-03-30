@@ -1,7 +1,7 @@
 //EXERCÍCIO 1:
 const newObject = (nomeCompleto) => ({
     nomeCompleto,
-    email: `${nomeCompleto.split(' ').join('_')}@trybe.com`
+    email: `${nomeCompleto.split(' ').join('_').toLowerCase()}@trybe.com`
 });
 
 const newEmployees = () => {
