@@ -75,8 +75,8 @@ const expectedResult = {
 };
 
 function getNamedBook() {
-  const first = books.find((book) => book.name.length === 26).name;
+  const first = books.find((book) => book.name.length === 26);
   return first;
-};
+}
 
-assert.deepStrictEqual(getNamedBook(), 'As Crônicas de Gelo e Fogo');
+assert.deepStrictEqual(getNamedBook(), expectedResult);
