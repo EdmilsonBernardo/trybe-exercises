@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+        div {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content" id="external-div">
+        <div id="internal-div" class="center-content">
+            <p>Texto padrão do nosso site</p>
+            <p id="my-text">-----</p>
+            <p>Trybe</p>
+        </div>
+    </div>
+    <script>
+        const elementsP = document.getElementsByTagName('p');
+
+        const insertText = () => {
+            let myText = document.getElementById('my-text');
+            myText.innerText = 'Em constante evolucão como pessoa e como desenvolvedor de software.';
+        };
+
+        insertText();
+
+        const insertColorExternal = () => {
+            let externalDiv = document.getElementById('external-div');
+            externalDiv.style.backgroundColor = 'rgb(76,164,109)';
+        };
+
+        insertColorExternal();
+
+        const insertColorInternal = () => {
+            let internalDiv = document.getElementById('internal-div');
+            internalDiv.style.backgroundColor = 'white';
+        }
+
+        insertColorInternal();
+
+        const correctText = () => {
+            let myTitle = document.getElementsByTagName('h1');
+            myTitle[0].innerText = 'Exercício 5.1 - JavaScript';
+        };
+
+        correctText();
+
+        const changesToUpperCase = () => {
+            for (let index = 0; index <= elementsP.length; index += 1) {
+                elementsP[index].innerHTML = elementsP[index].innerHTML.toUpperCase();
+            }
+        };
+
+        changesToUpperCase();
+
+        const showAllTagP = () => {
+            for (let index = 0; index <= elementsP.length; index += 1) {
+                console.log(elementsP[index].innerHTML);
+            }
+        };
+
+        showAllTagP();
+
+    </script>
+</body>
+
+</html>
