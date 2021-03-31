@@ -1,7 +1,7 @@
 //EXERCÍCIO 1:
 const newObject = (nomeCompleto) => ({
     nomeCompleto,
-    email: `${nomeCompleto.split(' ').join('_').toLowerCase()}@trybe.com`
+    email: `${nomeCompleto.split(' ').join('_').toLowerCase().normalize('NFD')}@trybe.com`
 });
 
 const newEmployees = () => {
@@ -12,6 +12,8 @@ const newEmployees = () => {
     }
     return employees;
 };
+
+console.log(newEmployees());
 
 //EXERCÍCIO 2:
 const numberDrawn = Math.floor(Math.random() * 5 + 1);
